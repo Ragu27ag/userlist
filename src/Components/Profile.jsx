@@ -19,11 +19,13 @@ const {id} = useParams();
 
     useEffect(() => {
      
+      if(id !== ''){
         fetch(`https://649034421e6aa71680cacc9a.mockapi.io/user/${id}`)
-            .then((res) => res.json())
-            .then((users) => {setuserData(users)})
-
-    },[])
+        .then((res) => res.json())
+        .then((users) => {setuserData(users)})
+      }
+       
+    },[id])
 
     console.log(userdata)
   return (
