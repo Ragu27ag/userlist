@@ -57,7 +57,7 @@ const {id} = useParams();
         <Typography variant="body2" color="text.secondary">
          <p style={{textAlign:'left'}}>Email : {userdata.email}</p>
          <p style={{textAlign:'left'}}>Dob : {userdata.dob}</p>
-         <p style={{textAlign:'left'}}>City : {userdata.city.toUpperCase()}</p>
+         <p style={{textAlign:'left'}}>City : {userdata.city}</p>
          <p style={{textAlign:'left'}}>About.....</p>
          <p style={{textAlign:'start'}}>{userdata.about}</p>
         </Typography>

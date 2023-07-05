@@ -73,17 +73,17 @@ const AddUser = () => {
             <Box sx={{ maxWidth: '500px', margin: '10px' }} >
                 <h2 style={{textAlign:'start'}}>{id ? 'Edit User' : 'Add User' }</h2>
                 <form onSubmit={handleSubmit}>
-                    <TextField fullWidth id="name" name='name' type='text' label="Name" value={user.name} onChange={(e) => { handlestate('name', e.target.value) }} variant="standard" />
+                    <TextField fullWidth id="name" name='name' type='text' label="Name" required value={user.name} onChange={(e) => { handlestate('name', e.target.value) }} variant="standard" />
                     <br />
-                    <TextField fullWidth id="email" name='email' type='email' label="Email" value={user.email} variant="standard" onChange={(e) => { handlestate('email', e.target.value) }} />
-                    <br />
-                    <br />
-                    <TextField fullWidth sx={{}} id="dob" name='dob' type='date' label="" value={user.dob} variant="standard" onChange={(e) => { handlestate('dob', e.target.value) }} />
-                    <br />
-                    <TextField fullWidth id="city" name='city' type='text' label="City" value={user.city} variant="standard" onChange={(e) => { handlestate('city', e.target.value) }} />
+                    <TextField fullWidth id="email" name='email' type='email' label="Email" required value={user.email} variant="standard" onChange={(e) => { handlestate('email', e.target.value) }} />
                     <br />
                     <br />
-                    <Textarea maxRows={10} fullWidth placeholder="About you......." id="about" value={user.about} name='about' type='text' variant="outlined" onChange={(e) => { handlestate('about', e.target.value) }} />
+                    <TextField fullWidth sx={{}} id="dob" name='dob' type='date' label="" required value={user.dob} variant="standard" onChange={(e) => { handlestate('dob', e.target.value) }} />
+                    <br />
+                    <TextField fullWidth id="city" name='city' type='text' label="City" required value={user.city} variant="standard" onChange={(e) => { handlestate('city', e.target.value) }} />
+                    <br />
+                    <br />
+                    <Textarea maxRows={10} fullWidth placeholder="About you......." id="about" required value={user.about} name='about' type='text' variant="outlined" onChange={(e) => { handlestate('about', e.target.value) }} />
                     <Button sx={{ margin: '25px'}} type='submit' >{id ? 'Edit' : 'Add'}</Button>
                 </form>
             </Box>
