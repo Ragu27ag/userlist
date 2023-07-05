@@ -9,20 +9,20 @@ import Button from '@mui/material/Button';
 
 const Profile = () => {
     const [userdata, setuserData] = useState([]);
-    const {id} = useParams();
+    
     const navigate = useNavigate();
 
 const revert = () => {
   navigate('/')
 }
-
+const {id} = useParams();
     useEffect(() => {
      
         fetch(`https://649034421e6aa71680cacc9a.mockapi.io/user/${id}`)
             .then((res) => res.json())
             .then((users) => {setuserData(users)})
 
-    },[id])
+    })
 
     console.log(userdata)
   return (
